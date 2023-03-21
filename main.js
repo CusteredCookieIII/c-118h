@@ -1,3 +1,6 @@
+counter=0;
+
+
 function setup() {
     canvas = createCanvas(280, 280);
     canvas.center();
@@ -38,3 +41,14 @@ function gotResult(error, results) {
     utterThis = new SpeechSynthesisUtterance(results[0].label);
     synth.speak(utterThis);
 }
+
+function start_timer(){
+ counter++;
+ 
+ if(counter>400){
+    counter=0;
+    
+ }
+
+}
+
